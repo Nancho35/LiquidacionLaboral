@@ -9,10 +9,11 @@ import {TooltipModule} from 'ng2-tooltip-directive';
 import { BienvenidaComponent } from './bienvenida/bienvenida.component';
 import { ModulosComponent } from './modulos/modulos.component';
 import { BasePromedioComponent } from './base-promedio/base-promedio.component';
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatCheckboxModule} from '@angular/material/checkbox'; 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule,TooltipModule,HttpClientModule ],
+  imports:      [ MatCheckboxModule,BrowserAnimationsModule,BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule,TooltipModule,HttpClientModule ],
   declarations: [ AppComponent, AppRoutingModule.components, CamelToTitlePipe, BienvenidaComponent, ModulosComponent, BasePromedioComponent ],
   bootstrap:    [ AppComponent ]
 })

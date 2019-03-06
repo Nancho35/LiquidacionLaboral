@@ -6,10 +6,15 @@
 
           <form [formGroup]="baseForm" (ngSubmit)="onSubmit(baseForm)">
             
-            <div *ngFor="let opcion of opciones.controls; let i=index">
-              <input type="checkbox" [formControl]="opcion"/> {{lista.opciones[i].name}}
-           </div>
-              
+                <mat-checkbox id="ck1" class="example-section" color="primary"
+                formControlName="ck1">Amateur</mat-checkbox>
+
+                <mat-checkbox id="ck2" class="example-section" color="primary"
+                formControlName="ck2">Amateur</mat-checkbox>
+
+                <mat-checkbox id="ck3" class="example-section" color="primary"
+                formControlName="ck3">Amateur</mat-checkbox>
+                
               <button type="submit" class="btn btn-default" [disabled]="!baseForm.valid">Siguiente</button>
           </form>
       </div>
